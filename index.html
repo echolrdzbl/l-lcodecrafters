@@ -31,11 +31,75 @@
 			filter: blur(5px);
 		}
 	}
+        @media only screen and (max-width: 1300px) {
+            
+            h3.vr {
+                display: none;
+            }
+        }
 
+		@media only screen and (max-width:  600px) {
+           
+            h3.vr {
+                display: block;
+            }
+        }
+
+		@media only screen and (max-width:  1070px) {
+           
+		   .par {
+			margin: 15px;
+		   }
+	   }
+
+	   @media only screen and (max-width:  600px) {
+           
+		   .par {
+			margin: 1px;
+		   }
+	   }
+		@keyframes blink {
+				0% { opacity: 1; }
+				50% { opacity: 0; }
+				100% { opacity: 1; }
+			}
+
+			h1 span {
+				animation: blink 1s infinite; /* Adjust the duration as needed */
+			}
+	
+		
 
     
 
 </style>
+
+<!-- 
+@keyframes keyPress {
+	0%, 20%, 40%, 60%, 80%, 100% {
+		transform: translateY(0);
+	}
+	10%, 30%, 50%, 70%, 90% {
+		transform: translateY(-5px);
+	}
+}
+
+h1 span {
+	display: inline-block;
+	animation: keyPress 1s steps(1) infinite; /* Adjust the duration as needed */
+}
+@keyframes snake {
+	0% { transform: translateX(0); }
+	25% { transform: translateX(50px) translateY(20px); }
+	50% { transform: translateX(0); }
+	75% { transform: translateX(-50px) translateY(20px); }
+	100% { transform: translateX(0); }
+}
+
+h1 span {
+	display: inline-block;
+	animation: snake 4s linear infinite; /* Adjust the duration and timing function as needed */
+} -->
 
 
 
@@ -72,17 +136,14 @@
 				<div class="overlay" ></div>
 				<div class="container-fluid p-0" >
 					<div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" >
-						<div class="one-third order-md-last img js-fullheight" id="imgbg"
-							style="background-image:url(images/bg.png); overflow-x:hidden; ">
+						<div class="one-third order-md-last img js-fullheight" id="imgbg" style="background-image:url(images/bg.png); overflow-x:hidden; ">
 							<div class="overlay"></div>
 						</div>
 						<div class="one-forth d-flex js-fullheight align-items-center ftco-animate">
 							<div class="text">
-
-								<h1>Your Vision, <span>Our Code.</span></h1>
-								<p>Lardizabal & Lapinig CodeCrafters is a dynamic and innovative company specializing in
-									UI and UX,
-									Website and App development.</p>
+								<span class="subheading">Welcome to L&L CodeCrafters</span>
+								<h1 class="mb-4 mt-3">Your Vision, <span>Our Code.</span></h1>
+								<p class="par">Lardizabal & Lapinig CodeCrafters is a dynamic and innovative company specializing inUI and UX, Website and App development.</p>
 								<p><a href="https://youtu.be/dQw4w9WgXcQ?si=wkU8xIAYH-Cz0Olb"
 										class="btn  px-5 py-3 mt-3 glightbox btn-watch-video"
 										style="background-color:#C6915B; color: white;">Watch Now</a></p>
@@ -236,7 +297,7 @@
 	</section>
 
 	<section class="ftco-section ftco-project bg-light" id="projects-section">
-		<div class="container px-md-5">
+		<div class="container px-md-5" style="overflow-x:hidden;">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<span class="subheading">Accomplishments</span>
