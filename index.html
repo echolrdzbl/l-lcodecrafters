@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <style>
@@ -31,47 +32,53 @@
 			filter: blur(5px);
 		}
 	}
-        @media only screen and (max-width: 1300px) {
-            
-            h3.vr {
-                display: none;
-            }
-        }
 
-		@media only screen and (max-width:  600px) {
-           
-            h3.vr {
-                display: block;
-            }
-        }
+	@media only screen and (max-width: 1300px) {
 
-		@media only screen and (max-width:  1070px) {
-           
-		   .par {
+		h3.vr {
+			display: none;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+
+		h3.vr {
+			display: block;
+		}
+	}
+
+	@media only screen and (max-width: 1070px) {
+
+		.par {
 			margin: 15px;
-		   }
-	   }
+		}
+	}
 
-	   @media only screen and (max-width:  600px) {
-           
-		   .par {
+	@media only screen and (max-width: 600px) {
+
+		.par {
 			margin: 1px;
-		   }
-	   }
-		@keyframes blink {
-				0% { opacity: 1; }
-				50% { opacity: 0; }
-				100% { opacity: 1; }
-			}
+		}
+	}
 
-			h1 span {
-				animation: blink 1s infinite; /* Adjust the duration as needed */
-			}
-	
-		
+	@keyframes blink {
+		0% {
+			opacity: 1;
+		}
 
-    
+		50% {
+			opacity: 0;
+		}
 
+		100% {
+			opacity: 1;
+		}
+	}
+
+	h1 span {
+		animation: blink 1s infinite;
+		/* Adjust the duration as needed */
+	}
 </style>
 
 <!-- 
@@ -131,19 +138,22 @@ h1 span {
 	</nav>
 	<section id="home-section" class="hero">
 		<h3 class="vr">Welcome to L&L CodeCrafters</h3>
-		<div class="home-slider js-fullheight owl-carousel " style="overflow-x:hidden;" >
-			<div class="slider-item js-fullheight" >
-				<div class="overlay" ></div>
-				<div class="container-fluid p-0" style="overflow-x:hidden;" >
-					<div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" style="overflow-x:hidden;" >
-						<div class="one-third order-md-last img js-fullheight" id="imgbg" style="background-image:url(images/bg.png); overflow-x:hidden; ">
+		<div class="home-slider js-fullheight owl-carousel " style="overflow-x:hidden;">
+			<div class="slider-item js-fullheight">
+				<div class="overlay"></div>
+				<div class="container-fluid p-0" style="overflow-x:hidden;">
+					<div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end"
+						style="overflow-x:hidden;">
+						<div class="one-third order-md-last img js-fullheight" id="imgbg"
+							style="background-image:url(images/bg.png); overflow-x:hidden; ">
 							<div class="overlay"></div>
 						</div>
 						<div class="one-forth d-flex js-fullheight align-items-center ftco-animate">
 							<div class="text">
 								<span class="subheading">Welcome to L&L CodeCrafters</span>
 								<h1 class="mb-4 mt-3">Your Vision, <span>Our Code.</span></h1>
-								<p class="par">Lardizabal & Lapinig CodeCrafters is a dynamic and innovative company specializing inUI and UX, Website and App development.</p>
+								<p class="par">Lardizabal & Lapinig CodeCrafters is a dynamic and innovative company
+									specializing inUI and UX, Website and App development.</p>
 								<p><a href="https://youtu.be/dQw4w9WgXcQ?si=wkU8xIAYH-Cz0Olb"
 										class="btn  px-5 py-3 mt-3 glightbox btn-watch-video"
 										style="background-color:#C6915B; color: white;">Watch Now</a></p>
@@ -297,7 +307,7 @@ h1 span {
 	</section>
 
 	<section class="ftco-section ftco-project bg-light" id="projects-section">
-		<div class="container px-md-5" style="overflow-x:hidden;">
+		<div class="container px-md-5">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<span class="subheading">Accomplishments</span>
@@ -306,7 +316,7 @@ h1 span {
 						From concept to completion, we deliver solutions that make a difference.</p>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" style="overflow-x:hidden;">
 				<div class="col-md-12 testimonial">
 					<div class="carousel-project owl-carousel">
 						<div class="item">
@@ -817,7 +827,7 @@ h1 span {
 
 			<div class="row no-gutters justify-content-center block-9">
 				<div class="col-md-6 order-md-last d-flex">
-					<form id="contactForm"  class="bg-light p-5 contact-form">
+					<form id="contactForm" class="bg-light p-5 contact-form">
 						<div class="form-group">
 							<input type="text" class="form-control" name="name" id="name" placeholder="Your Name"
 								required>
@@ -836,7 +846,7 @@ h1 span {
 						</div>
 						<div class="form-group">
 							<input type="button" value="Send Message" class="btn py-3 px-5"
-								style="background-color: #C6915B; color: white;" onclick="submitForm()">
+								style="background-color: #C6915B; color: white;" onclick="sendMail()">
 						</div>
 					</form>
 				</div>
@@ -933,7 +943,6 @@ h1 span {
 				stroke="#4D86AA" />
 		</svg></div>
 
-
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
@@ -948,9 +957,20 @@ h1 span {
 	<script src="js/scrollax.min.js"></script>
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="js/email.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("eBdZnbqJzZA_requv");
+		})();
+	</script>
+
+
+	</script>
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/email.js"></script>
+
+
 
 
 

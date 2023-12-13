@@ -1,38 +1,33 @@
-function submitForm() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var subject = document.getElementById("subject").value;
-    var message = document.getElementById("message").value;
+function sendMail() {
+    var params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    };
 
-    var data = {
+    if (name === "" || email === "" || subject === "" || message === "") {
+        alert("Please fill out all required fields.");
+        return;
+    }
+
+    var params = {
         name: name,
         email: email,
         subject: subject,
-        message: message
+        message: message,
     };
 
-    fetch('sendEmail.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+
+const serviceId = "service_c88wscn"
+const templateId = "template_z0t74km"
+emailjs.send(serviceId, templateId, params).then((res) => {
+        document.getElementById("name").value = "",
+            document.getElementById("email").value = "",
+            document.getElementById("subject").value = "",
+            document.getElementById("message").value = "",
+            console.log(res);
+        alert("Your Message sent successfully!");
     })
-    .then(response => {
-        console.log('Response status:', response.status);
-        if (response.status === 200) {
-            // Assuming 200 status code means success
-            console.log('Success: Email sent successfully!');
-            alert("Email sent successfully!");
-        } else {
-            console.log('Error: Unexpected status code:', response.status);
-            alert("Error sending email. Please try again later.");
-        }
-    })
-    
-    .catch((error) => {
-        console.error('Error:', error);
-        // Handle error, for example, show an error message to the user
-        alert("Error sending message. Please try again later.");
-    });
+    .catch((err) => console.log(err));
 }
